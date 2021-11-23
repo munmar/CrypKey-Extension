@@ -1,0 +1,20 @@
+{
+  "name": "Fake News Detection",
+  "version": "1.0",
+  "description": "You no longer have to worry about what is real and what is fake!",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/question.png"
+  },
+  "icons": {
+    "16": "images/question.png",
+    "32": "images/question.png",
+    "48": "images/question.png",
+    "128": "images/question.png"
+  }
+}
