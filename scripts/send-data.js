@@ -8,13 +8,14 @@ function fetchData() {
   }
 }
 
+
 function sendData(data) {
   const url = 'https://wagon-chat.herokuapp.com/engineering/messages';
   fetch(url, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      "author": "Le Wagon chrome extension",
+      "author": "Fake News Team",
       "content": `${data.title} on ${data.url}`
     })
   })
