@@ -10,15 +10,16 @@ function fetchData() {
 
 
 function sendData(data) {
-  const url = 'https://wagon-chat.herokuapp.com/engineering/messages';
+  const url = 'http://127.0.0.1:8000/predict_cloud';
   fetch(url, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       "author": "Fake News Team",
-      "content": `${data.text} on ${data.url}`,
+      "content": `${data.text}`,
+      "url": `${data.url}`
     })
-  })
+  }).then(res => res.json()).then(data => { console.log(data) })
 }
 
 sendData(fetchData());
