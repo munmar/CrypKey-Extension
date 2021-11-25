@@ -1,9 +1,9 @@
 function fetchData() {
-  const title = document.querySelector('article').innerText;
+  const text = document.querySelector('article').innerText;
   const url = window.location.href;
 
   return {
-    title: title,
+    text: text,
     url: url
   }
 }
@@ -16,7 +16,7 @@ function sendData(data) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       "author": "Fake News Team",
-      "content": `${data.title} on ${data.url}`
+      "content": `${data.text} on ${data.url}`,
     })
   })
 }
