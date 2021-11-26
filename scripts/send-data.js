@@ -10,7 +10,7 @@ function fetchData() {
 
 
 function sendData(data) {
-  const url = 'http://127.0.0.1:8000/predict_cloud';
+  const url = 'https://detect-fake-news-api-ztj5atks2q-ew.a.run.app/predict_cloud';
   fetch(url, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
