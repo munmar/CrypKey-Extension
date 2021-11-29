@@ -1,11 +1,13 @@
 body {
-  background-color: lightgrey;
+  background: white;
   height: 200px;
+  width: 300px;
   margin: 0;
-  /* display: flex;
+  /*display: flex;
   justify-content: center;
   align-items: center; */
 }
+
 
 .container {
   width:100%;
@@ -17,7 +19,7 @@ body {
 }
 
 .header {
-  width: 200px;
+  width: 100%;
   padding: 10px;
   border-bottom:2px solid gray;
   text-align: center;
@@ -47,12 +49,24 @@ button#send-data {
   outline: none !important;
 }
 
+.box1 {
+  visibility: hidden;
+  width: inherit;
+  height: 100px;
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
 #prediction {
   font-size: 3em;
   font-weight: bold;
   visibility: hidden;
-  z-index: -1;
   align-items: center;
+  text-align: center;
 }
 
 .indicators {

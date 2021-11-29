@@ -35,7 +35,6 @@ function listenClick() {
     });
     hide_button(button)
     prediction_appear()
-    gauge()
   })
 }
 
