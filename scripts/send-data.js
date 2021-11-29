@@ -19,7 +19,7 @@ function sendData(data) {
       "content": `${data.text}`,
       "url": `${data.url}`
     })
-  }).then(res => res.json()).then(data => { console.log(data) })
+  }).then(res => res.json()).then(data => {console.log(Object.values(data))})
 }
 
 sendData(fetchData());

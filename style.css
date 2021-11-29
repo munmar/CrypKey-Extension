@@ -1,19 +1,140 @@
 body {
-  width: 200px;
+  background-color: lightgrey;
   height: 200px;
   margin: 0;
-  display: flex;
+  /* display: flex;
   justify-content: center;
+  align-items: center; */
+}
+
+.container {
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
   align-items: center;
 }
 
-button#send-data {
-  background: #C3413B;
+.header {
+  width: 200px;
   padding: 10px;
-  font-size: 1em;
+  border-bottom:2px solid gray;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.box {
+  width:inherit;
+  height:100px;
+  margin:0;
+  display: flex;
+  box-sizing:border-box;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button#send-data {
+  background: #dd2219;
+  padding: 10px;
+  margin-top:50px;
+  font-size: 1.2em;
   border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: white;
   outline: none !important;
+}
+
+#prediction {
+  font-size: 3em;
+  font-weight: bold;
+  visibility: hidden;
+  z-index: -1;
+  align-items: center;
+}
+
+.indicators {
+  margin-top: 40px;
+  position: relative;
+  flex-direction: column;
+  text-align: left;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-left: 5px;
+  text-decoration: underline;
+}
+
+ul {
+ padding-left: 17px;
+}
+
+li {
+  margin: auto;
+  font-size: 1.1em;
+  list-style-type: square;
+  padding: 0;
+}
+
+/* ---------------------GAUGE------------------------*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+  --rotation: 0deg;
+}
+
+body {
+  height: 100vh;
+}
+
+.container1 {
+  font-family: Arial;
+  height: 8rem;
+  left: 50%;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16rem;
+}
+
+.loader {
+  background: transparent;
+  border: 30px solid #D7ECA6;
+  border-radius: 50%;
+  height: 16rem;
+  transition: transform .2s ease;
+  transform: rotate(var(--rotation));
+  position: relative;
+  width: 16rem;
+}
+.loader::before {
+  content: '';
+  border: 30px solid #8CC800;
+  border-left-color: transparent;
+  border-radius: 50%;
+  border-top-color: transparent;
+  height: 16rem;
+  left: -30px;
+  top: -30px;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 16rem;
+  z-index: 2;
+}
+.loader__title {
+  color: #8CC800;
+  font-size: 5rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 }

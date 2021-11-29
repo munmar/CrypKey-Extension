@@ -6,7 +6,26 @@
   </head>
 
   <body>
-    <button id="send-data">Analyze</button>
+    <div class="container">
+      <div class="header">
+        <h2>Fake News Detection</h2>
+      </div>
+      <div class="box">
+        <button id="send-data">Analyze</button>
+        <!-- <p id="prediction">0</p> -->
+      </div>
+      <div class="container1">
+        <h1 class="loader__title">0</h1>
+        <div class="loader"></div>
+      </div>
+      <div class='indicators'>
+        <h4>Based on:</h4>
+        <ul>
+          <li>Vocab Richness</li>
+          <li>Punctuation</li>
+        </ul>
+      </div>
+    </div>
   </body>
-  <script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="popup.js"></script>
 </html>
