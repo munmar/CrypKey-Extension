@@ -24,6 +24,7 @@ body {
   border-bottom:2px solid gray;
   text-align: center;
   justify-content: space-around;
+  margin-bottom: 200px;
 }
 
 .box {
@@ -35,6 +36,8 @@ body {
   text-align: center;
   align-items: center;
   justify-content: space-around;
+  position: absolute;
+  z-index: 1;
 }
 
 button#send-data {
@@ -50,23 +53,25 @@ button#send-data {
 }
 
 .box1 {
+  position: absolute;
   visibility: hidden;
+  z-index: 2;
   width: inherit;
   height: 100px;
   margin: 0;
   display: flex;
   box-sizing: border-box;
   text-align: center;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
 }
 
 #prediction {
   font-size: 3em;
   font-weight: bold;
-  visibility: hidden;
   align-items: center;
   text-align: center;
+  margin: 0;
 }
 
 .indicators {

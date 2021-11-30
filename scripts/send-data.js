@@ -8,7 +8,6 @@ function fetchData() {
   }
 }
 
-
 function sendData(data) {
   const url = 'https://detect-fake-news-api-ztj5atks2q-ew.a.run.app/predict_cloud';
   fetch(url, {
@@ -19,7 +18,8 @@ function sendData(data) {
       "content": `${data.text}`,
       "url": `${data.url}`
     })
-  }).then(res => res.json()).then(data => {console.log(Object.values(data))})
+  }).then(res => res.json()).then(data => {console.log(data);
+  })
 }
 
 sendData(fetchData());

@@ -1,8 +1,10 @@
 function hide_button() {
-  button = document.getElementById('send-data').style.visibility = 'hidden'
+  var btn = document.querySelector(".box")
+  btn.style.visibility = 'hidden'
 }
 function prediction_appear() {
-  predicted = document.getElementById('prediction').style.visibility = 'visible'
+  var preddiv = document.querySelector(".box1")
+  preddiv.style.visibility = 'visible'
 }
 function gauge() {
   const changeNum = () => {
