@@ -43,7 +43,6 @@ body {
 button#send-data {
   background: #dd2219;
   padding: 10px;
-  margin-top:50px;
   font-size: 1.2em;
   border: 0;
   border-radius: 50px;
@@ -73,7 +72,7 @@ button#send-data {
   text-align: center;
   margin: 0;
 }
-
+/* ---------- Indicators START---------- */
 .indicators {
   margin-top: 40px;
   position: relative;
@@ -99,6 +98,49 @@ li {
   list-style-type: square;
   padding: 0;
 }
+/* ---------- Indicators END---------- */
+/* ---------- FOOTER START ---------- */
+.footer {
+  width: 100%;
+  border-top:2px solid gray;
+  text-align: center;
+  justify-content: space-around;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.footer_li{
+  width: 50%;
+  float: left;
+}
+
+li.left_side {
+  border-right: 1px solid gray;
+}
+
+li.footer_li:last-child {
+  width: 50%;
+  float:right;
+  list-style-type: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(202, 195, 195);
+}
+/* ---------- FOOTER END ---------- */
 
 /* ---------------------GAUGE------------------------*/
 *,
