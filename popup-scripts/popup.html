@@ -2,6 +2,9 @@
 
   <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="popup.css">
   </head>
 
@@ -15,12 +18,14 @@
           <button id="send-data">Analyze</button>
         </div>
         <div class="box1">
-          <p id="prediction">0</p>
+          <div id="prediction">
+            <div id="loader" class="ui active centered inline loader"></div>
+          </div>
         </div>
         <footer class="footer">
           <ul>
-            <li class="footer_li left_side"><a href="#">Home</a></li>
-            <li class="footer_li"><a href="">Recent</a></li>
+            <li class="footer_li left_side"><a href="#"><i class="home icon"></i></a></li>
+            <li class="footer_li"><a href=""><i class="archive icon"></i></a></li>
           </ul>
         </footer>
         <!-- <div class="container1">

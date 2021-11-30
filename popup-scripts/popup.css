@@ -143,7 +143,7 @@ li a:hover:not(.active) {
 /* ---------- FOOTER END ---------- */
 
 /* ---------------------GAUGE------------------------*/
-*,
+/* *,
 *::after,
 *::before {
     box-sizing: border-box;
@@ -198,4 +198,4 @@ body {
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
-}
+} */
