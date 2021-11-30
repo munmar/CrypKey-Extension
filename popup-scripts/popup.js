@@ -33,7 +33,7 @@ function listenClick() {
   const button = document.getElementById('send-data');
   button.addEventListener('click',() => {
     chrome.tabs.executeScript({
-      file: 'scripts/send-data.js'
+      file: 'content-scripts/send-data.js'
     });
     hide_button(button)
     prediction_appear()
@@ -42,3 +42,8 @@ function listenClick() {
 
 
 listenClick();
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+  document.getElementById('prediction').innerHTML = parseFloat(parseFloat(message['prediction']*100).toFixed(1)) + '%'
+  console.log(message)
+  sendResponse()
+})

@@ -8,7 +8,7 @@
   },
   "permissions": ["activeTab"],
   "browser_action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup-scripts/popup.html",
     "default_icon": "images/question.png"
   },
   "icons": {
@@ -16,5 +16,6 @@
     "32": "images/question.png",
     "48": "images/question.png",
     "128": "images/question.png"
-  }
+  },
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com; object-src 'self'"
 }

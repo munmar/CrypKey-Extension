@@ -61,7 +61,7 @@ button#send-data {
   display: flex;
   box-sizing: border-box;
   text-align: center;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
 }
 
