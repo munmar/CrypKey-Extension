@@ -62,7 +62,8 @@ button#send-data {
   box-sizing: border-box;
   text-align: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 #prediction {
@@ -71,6 +72,11 @@ button#send-data {
   align-items: center;
   text-align: center;
   margin: 0;
+}
+#title {
+  font-size: 3em;
+  font-weight: bold;
+  color: red;
 }
 /* ---------- Indicators START---------- */
 .indicators {

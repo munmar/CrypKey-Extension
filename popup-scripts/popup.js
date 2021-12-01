@@ -7,8 +7,8 @@ function prediction_appear() {
   preddiv.style.visibility = 'visible'
 }
 function loader_change() {
-  document.getElementById("MyElement").className =
-    document.getElementById("MyElement").className.replace
+  document.getElementById("loader").className =
+    document.getElementById("loader").className.replace
       (/(?:^|\s)active(?!\S)/g, 'disabled')
 }
 
