@@ -12,6 +12,29 @@ function loader_change() {
       (/(?:^|\s)active(?!\S)/g, 'disabled')
 }
 
+
+function listenClick() {
+  const button = document.getElementById('send-data');
+  button.addEventListener('click',() => {
+    chrome.tabs.executeScript({
+      file: 'content-scripts/send-data.js'
+    });
+    hide_button(button)
+    prediction_appear()
+  })
+}
+
+
+listenClick();
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+  document.getElementById('prediction').innerHTML = parseFloat(parseFloat(message['prediction']*100).toFixed(1)) + '%'
+  loader_change()
+  console.log(message)
+  sendResponse()
+})
+
+
+
 // function gauge() {
 //   const changeNum = () => {
 //     const randomNum = Math.round(Math.random() * 100);
@@ -34,23 +57,3 @@ function loader_change() {
 //     changeNum();
 //   }, 2000);
 // }
-
-function listenClick() {
-  const button = document.getElementById('send-data');
-  button.addEventListener('click',() => {
-    chrome.tabs.executeScript({
-      file: 'content-scripts/send-data.js'
-    });
-    hide_button(button)
-    prediction_appear()
-  })
-}
-
-
-listenClick();
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-  document.getElementById('prediction').innerHTML = parseFloat(parseFloat(message['prediction']*100).toFixed(1)) + '%'
-  loader_change()
-  console.log(message)
-  sendResponse()
-})
