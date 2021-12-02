@@ -27,7 +27,7 @@ function listenClick() {
 
 listenClick();
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-  document.getElementById('prediction').innerHTML = parseFloat(parseFloat(message['prediction']*100).toFixed(1)) + '%'
+  document.getElementById('prediction').innerHTML = parseFloat(parseFloat(message['mean_proba']*100).toFixed(1)) + '%'
   loader_change()
   console.log(message)
   sendResponse()

@@ -9,7 +9,7 @@ function fetchData() {
 }
 
 function sendData(data) {
-  const url = 'https://detect-fake-news-api-ztj5atks2q-ew.a.run.app/predict_cloud';
+  const url = 'https://detect-fake-news-api-ztj5atks2q-ew.a.run.app/predict_all_post';
   fetch(url, {
     method: 'POST',
     mode: "cors",

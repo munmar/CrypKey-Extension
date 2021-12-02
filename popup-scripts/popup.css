@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background: #F4CAAC;
   height: 200px;
   width: 300px;
   margin: 0;
@@ -7,7 +7,6 @@ body {
   justify-content: center;
   align-items: center; */
 }
-
 
 .container {
   width:100%;
@@ -21,10 +20,16 @@ body {
 .header {
   width: 100%;
   padding: 10px;
-  border-bottom:2px solid gray;
+  border-bottom:2px solid #073533;
   text-align: center;
   justify-content: space-around;
   margin-bottom: 200px;
+}
+
+h1 {
+  color: #073533;
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .box {
@@ -41,13 +46,14 @@ body {
 }
 
 button#send-data {
-  background: #dd2219;
+  background: #DD6453;
+  font-family: 'Oswald', sans-serif;
   padding: 10px;
   font-size: 1.2em;
   border: 0;
   border-radius: 50px;
   cursor: pointer;
-  color: white;
+  color: #073533;
   outline: none !important;
 }
 
@@ -62,24 +68,27 @@ button#send-data {
   box-sizing: border-box;
   text-align: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
 }
 
 #prediction {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 1.7em;
+  font-family: 'Oswald', sans-serif;
+  color: #447E8C;
+  font-weight: 600;
   align-items: center;
   text-align: center;
   margin: 0;
 }
 #title {
-  font-size: 3em;
-  font-weight: bold;
-  color: red;
+  font-size: 1.7em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #073533;
 }
 /* ---------- Indicators START---------- */
-.indicators {
+/* .indicators {
   margin-top: 40px;
   position: relative;
   flex-direction: column;
@@ -103,12 +112,12 @@ li {
   font-size: 1.1em;
   list-style-type: square;
   padding: 0;
-}
+} */
 /* ---------- Indicators END---------- */
 /* ---------- FOOTER START ---------- */
 .footer {
   width: 100%;
-  border-top:2px solid gray;
+  border-top:2px solid #073533;
   text-align: center;
   justify-content: space-around;
 }
@@ -125,7 +134,7 @@ li.footer_li{
 }
 
 li.left_side {
-  border-right: 1px solid gray;
+  border-right: 1px solid #073533;
 }
 
 li.footer_li:last-child {
@@ -136,7 +145,7 @@ li.footer_li:last-child {
 
 li a {
   display: block;
-  color: black;
+  color: #DD6453;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
