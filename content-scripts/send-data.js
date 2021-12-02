@@ -1,7 +1,7 @@
 function fetchData() {
   const text = document.querySelector('article').innerText;
   const url = window.location.href;
-
+  console.log(text)
   return {
     text: text,
     url: url
