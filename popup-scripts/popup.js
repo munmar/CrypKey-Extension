@@ -1,18 +1,21 @@
+// Hides analyze button
 function hide_button() {
-  var btn = document.querySelector(".box")
+  let btn = document.querySelector(".box")
   btn.style.visibility = 'hidden'
 }
+// Make prediction element appear
 function prediction_appear() {
-  var preddiv = document.querySelector(".box1")
+  let preddiv = document.querySelector(".box1")
   preddiv.style.visibility = 'visible'
 }
+// changes to loader element once analyze clicked.
 function loader_change() {
   document.getElementById("loader").className =
     document.getElementById("loader").className.replace
       (/(?:^|\s)active(?!\S)/g, 'disabled')
 }
 
-
+// When analyze pressed, send-data to content script, and execute hide_button and prediction_appear functions.
 function listenClick() {
   const button = document.getElementById('send-data');
   button.addEventListener('click',() => {
@@ -26,6 +29,7 @@ function listenClick() {
 
 
 listenClick();
+// listen for prediction from content-script and add to inner HTML by using chrome message passing.
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   document.getElementById('prediction').innerHTML = parseFloat(parseFloat(message['mean_proba']*100).toFixed(1)) + '%'
   loader_change()
@@ -33,27 +37,3 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   sendResponse()
 })
 
-
-
-// function gauge() {
-//   const changeNum = () => {
-//     const randomNum = Math.round(Math.random() * 100);
-//     const degrees = Math.round((randomNum / 100) * 180);
-//     const root = document.querySelector(":root");
-//     let title = document.querySelector(".loader__title");
-//     let currentNumber = title.innerText;
-//     setInterval(() => {
-//       if (currentNumber < randomNum) {
-//         currentNumber++;
-//         title.innerText = currentNumber;
-//       } else if (currentNumber > randomNum) {
-//         currentNumber--;
-//         title.innerText = currentNumber;
-//       }
-//     }, 3);
-//     root.style.setProperty("--rotation", `${degrees}deg`);
-//   };
-//   setInterval(() => {
-//     changeNum();
-//   }, 2000);
-// }
